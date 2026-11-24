@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Augustin — Décoration blanche &amp; rose, meubles et architecture intérieure</title>
+  <meta name="description" content="Augustin imagine des styles de décoration blanche et rose, des meubles muraux sur mesure et des projets d'architecture intérieure." />
+
+  <!-- Polices Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Playfair+Display:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Icônes & Tailwind CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Ta feuille de style -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="min-h-screen bg-[var(--background-color)] text-[var(--text-color)]" style="font-family: var(--font-body);">
+
+  <!-- Navigation -->
+  <header class="site-header fixed left-0 right-0 top-0 z-40 border-b border-[var(--border-color)]">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-8" aria-label="Navigation principale">
+      <a href="#top" class="flex flex-col items-start text-left text-[var(--primary-color)] transition-opacity hover:opacity-75">
+        <span class="text-2xl leading-none sm:text-3xl" style="font-family: var(--font-logo);">Augustin</span>
+        <span class="mt-1 text-[0.54rem] font-bold uppercase leading-none tracking-[0.32em] text-[var(--logo-subtitle-color)]">Décoration &amp; mobilier</span>
+      </a>
+
+      <div class="hidden lg:flex items-center gap-6 text-sm font-semibold">
+        <a href="#top" class="hover:text-[var(--primary-hover)]">Accueil</a>
+        <a href="#architecture" class="hover:text-[var(--primary-hover)]">Intérieurs</a>
+        <a href="#meubles-univers" class="hover:text-[var(--primary-hover)]">Meubles</a>
+        <a href="#murs" class="hover:text-[var(--primary-hover)]">Murs</a>
+        <a href="#styles" class="hover:text-[var(--primary-hover)]">Styles</a>
+        <a href="#conseiller" class="hover:text-[var(--primary-hover)]">Conseiller IA</a>
+        <a href="#contact" class="rounded-full bg-[var(--button-color)] px-6 py-2.5 text-[var(--text-color)] shadow-[var(--shadow-button)] hover:bg-[var(--primary-hover)] hover:text-white transition">Devis gratuit</a>
+      </div>
+
+      <button type="button" id="navOpenButton" class="lg:hidden inline-flex h-11 w-11 items-center justify-center rounded-full border border-[var(--glass-border)] bg-white text-[var(--text-color)]" aria-label="Ouvrir le menu">
+        <i class="fa-solid fa-bars text-lg"></i>
+      </button>
+    </nav>
+
+    <!-- Menu Mobile -->
+    <div id="navOverlay" class="fixed inset-0 z-50 hidden flex-col bg-[var(--background-color)] p-6 lg:hidden" aria-hidden="true">
+      <div class="flex items-center justify-between border-b border-[var(--border-color)] pb-4">
+        <span class="text-2xl text-[var(--primary-color)]" style="font-family: var(--font-logo);">Augustin</span>
+        <button type="button" id="navCloseButton" class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[var(--border-color)] bg-white" aria-label="Fermer le menu">
+          <i class="fa-solid fa-xmark text-lg"></i>
+        </button>
+      </div>
+      <nav class="mt-8 flex flex-col gap-4 text-xl font-semibold" style="font-family: var(--font-heading);">
+        <a href="#top" class="nav-close-link py-2 border-b border-[var(--border-color)]">Accueil</a>
+        <a href="#architecture" class="nav-close-link py-2 border-b border-[var(--border-color)]">Architecture intérieure</a>
+        <a href="#meubles-univers" class="nav-close-link py-2 border-b border-[var(--border-color)]">Meubles sur mesure</a>
+        <a href="#murs" class="nav-close-link py-2 border-b border-[var(--border-color)]">Décoration murale</a>
+        <a href="#conseiller" class="nav-close-link py-2 border-b border-[var(--border-color)]">Conseiller IA</a>
+        <a href="#contact" class="nav-close-link py-2">Demander un devis</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="relative overflow-hidden px-5 pb-20 pt-32 sm:px-8 lg:pt-36">
+      <div class="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-2">
+        <div>
+          <p class="section-kicker">Atelier de décoration murale</p>
+          <h1 class="mt-5 text-4xl font-semibold leading-tight tracking-[-0.03em] sm:text-6xl" style="font-family: var(--font-heading);">
+            Des murs doux et lumineux, pensés pour vous.
+          </h1>
+          <p class="mt-6 max-w-xl text-lg leading-8 text-[var(--text-muted)]">
+            Augustin imagine des styles de décoration uniques : matières naturelles, lignes épurées pour votre maison comme pour votre lieu de travail.
+          </p>
+          <div class="mt-9 flex flex-col gap-4 sm:flex-row">
+            <a href="#meubles-univers" class="rounded-full border border-[var(--glass-border)] bg-white px-8 py-3.5 text-center font-semibold shadow-[var(--shadow-soft)] hover:border-[var(--primary-color)] transition">Découvrir nos meubles</a>
+            <a href="#contact" class="rounded-full bg-[var(--button-color)] px-8 py-3.5 text-center font-semibold shadow-[var(--shadow-button)] hover:bg-[var(--primary-hover)] hover:text-white transition">Demander un devis</a>
+          </div>
+        </div>
+        <div class="mx-auto w-full max-w-[540px]">
+          <div class="arch-frame">
+            <img alt="Salon lumineux décoré en blanc et rose" src="https://files.cdn-files-a.com/uploads/12486419/800_un-6ad8867cb2808.jpg?format=avif" class="h-full w-full object-cover" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 1 · Architecture intérieure -->
+    <section id="architecture" class="section-pad px-5 sm:px-8">
+      <div class="mx-auto max-w-7xl">
+        <div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+          <div>
+            <p class="section-kicker">1 · Architecture intérieure</p>
+            <h2 class="mt-3 max-w-2xl text-3xl font-semibold sm:text-5xl" style="font-family: var(--font-heading);">L'architecture d'abord : dessinons vos espaces.</h2>
+          </div>
+          <p class="max-w-md text-sm leading-7 text-[var(--text-muted)]">Conception, plans et vues 3D, suivi de chantier. Ouvrez une prestation pour découvrir ses modèles réels, les faire adapter par le conseiller IA et confirmer votre commande.</p>
+        </div>
+
+        <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <article class="choice-card" data-select-card>
+            <button type="button" class="choice-visual" data-preview-source="architecture" data-preview-index="0">
+              <img alt="Plan d'aménagement" src="https://files.cdn-files-a.com/admin/system_photos_stock/800_6af22ab721b98.jpg?format=avif" loading="lazy" />
+              <span class="choice-visual-label">Architecture</span>
+            </button>
+            <div class="flex flex-1 flex-col p-6">
+              <h3 class="text-xl font-semibold" style="font-family: var(--font-heading);">Conception d'espaces</h3>
+              <p class="mt-3 flex-1 text-sm leading-7 text-[var(--text-muted)]">Plans d'aménagement, circulation et zoning des pièces pour un lieu qui fonctionne au quotidien.</p>
+              <p class="mt-4 text-xs font-semibold uppercase tracking-[0.14em] text-[var(--rose-dark)]">3 modèles · dès 2 à 3 semaines</p>
+              <div class="mt-5 flex flex-wrap items-center gap-2">
+                <button type="button" class="preview-open-btn" data-preview-source="architecture" data-preview-index="0">Voir les modèles</button>
+                <button type="button" class="select-toggle" data-select-item="Conception d'espaces" aria-pressed="false">
+                  <span data-select-label data-label-default="Choisir">Choisir</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="choice-card" data-select-card>
+            <button type="button" class="choice-visual" data-preview-source="architecture" data-preview-index="1">
+              <img alt="Plans et vues 3D" src="https://files.cdn-files-a.com/admin/system_photos_stock/800_6960914bcb7c9.jpg?format=avif" loading="lazy" />
+              <span class="choice-visual-label">Architecture</span>
+            </button>
+            <div class="flex flex-1 flex-col p-6">
+              <h3 class="text-xl font-semibold" style="font-family: var(--font-heading);">Plans et vues 3D</h3>
+              <p class="mt-3 flex-1 text-sm leading-7 text-[var(--text-muted)]">Des visuels réalistes de votre futur intérieur, pour valider chaque choix en toute confiance.</p>
+              <p class="mt-4 text-xs font-semibold uppercase tracking-[0.14em] text-[var(--rose-dark)]">3 modèles · dès 1 à 2 semaines</p>
+              <div class="mt-5 flex flex-wrap items-center gap-2">
+                <button type="button" class="preview-open-btn" data-preview-source="architecture" data-preview-index="1">Voir les modèles</button>
+                <button type="button" class="select-toggle" data-select-item="Plans et vues 3D" aria-pressed="false">
+                  <span data-select-label data-label-default="Choisir">Choisir</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="choice-card" data-select-card>
+            <button type="button" class="choice-visual" data-preview-source="architecture" data-preview-index="2">
+              <img alt="Suivi de chantier" src="https://files.cdn-files-a.com/admin/system_photos_stock/800_6976768105ef1.jpg?format=avif" loading="lazy" />
+              <span class="choice-visual-label">Architecture</span>
+            </button>
+            <div class="flex flex-1 flex-col p-6">
+              <h3 class="text-xl font-semibold" style="font-family: var(--font-heading);">Suivi de chantier</h3>
+              <p class="mt-3 flex-1 text-sm leading-7 text-[var(--text-muted)]">Coordination des artisans et contrôle des finitions jusqu'à la remise des clés.</p>
+              <p class="mt-4 text-xs font-semibold uppercase tracking-[0.14em] text-[var(--rose-dark)]">3 modèles · dès 3 à 5 jours</p>
+              <div class="mt-5 flex flex-wrap items-center gap-2">
+                <button type="button" class="preview-open-btn" data-preview-source="architecture" data-preview-index="2">Voir les modèles</button>
+                <button type="button" class="select-toggle" data-select-item="Suivi de chantier" aria-pressed="false">
+                  <span data-select-label data-label-default="Choisir">Choisir</span>
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <script type="application/json" data-prestation-source="architecture">
+      [
+        {"group":"Architecture","title":"Conception d'espaces","models":[
+          {"name":"Séjour traversant","desc":"Plan ouvert, circulation centrale, zone repas côté cour et coin lecture près de la fenêtre.","lead":"2 à 3 semaines","image":"https://files.cdn-files-a.com/admin/system_photos_stock/normal_695bdc94e241c.jpg?format=avif"},
+          {"name":"Studio optimisé","desc":"Rangements toute hauteur et séparation légère pour garder la lumière.","lead":"2 à 3 semaines","image":"https://files.cdn-files-a.com/admin/system_photos_stock/normal_69743c0775630.jpg?format=avif"},
+          {"name":"Accueil de bureau","desc":"Un accueil clair, deux salles de réunion et un espace détente.","lead":"3 à 4 semaines","image":"https://files.cdn-files-a.com/admin/system_photos_stock/normal_695fe72ff2002.jpg?format=avif"}
+        ]},
+        {"group":"Architecture","title":"Plans et vues 3D","models":[
+          {"name":"Vue séjour — blanc & rose","desc":"Rendu photo du séjour avec la palette blanc mat et rose poudré.","lead":"1 à 2 semaines","image":"https://files.cdn-files-a.com/admin/system_photos_stock/normal_695d4c8961ee6.jpg?format=avif"},
+          {"name":"Vue chambre — matières douces","desc":"Rendu de la chambre avec tête de lit capitonnée et lin lavé.","lead":"1 à 2 semaines","image":"https://files.cdn-files-a.com/admin/system_photos_stock/normal_6af2185c11ebc.jpg?format=avif"},
+          {"name":"Vue accueil — mobilier mural","desc":"Rendu d'un hall avec banque d'accueil et modules muraux sur mesure.","lead":"2 semaines","image":"https://files.cdn-files-a.com/admin/system_photos_stock/normal_69782e8c52e0d.jpg?format=avif"}
+        ]},
+        {"group":"Architecture","title":"Suivi de chantier","models":[
+          {"name":"Pose d'un habillage mural","desc":"Préparation du support, pose des panneaux et des lattes au millimètre.","lead":"3 à 5 jours","image":"https://files.cdn-files-a.com/admin/system_photos_stock/normal_6973d8a36477e.jpg?format=avif"},
+          {"name":"Montage d'une bibliothèque","desc":"Traçage, fixation renforcée et réglage des tablettes.","lead":"2 à 4 jours","image":"https://files.cdn-files-a.com/admin/system_photos_stock/normal_695f63628419a.jpg?format=avif"},
+          {"name":"Réglages et finitions","desc":"Ajustement des portes et tiroirs, éclairage intégré et nettoyage complet.","lead":"1 à 2 jours","image":"https://files.cdn-files-a.com/admin/system_photos_stock/normal_6974134428fe4.jpg?format=avif"}
+        ]}
+      ]
+      </script>
+    </section>
+
+    <!-- 2 · Meubles sur mesure -->
+    <section id="meubles-univers" class="section-pad bg-[var(--surface-color)] px-5 sm:px-8">
+      <div class="mx-auto max-w-7xl">
+        <div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+          <div>
+            <p class="section-kicker">2 · Meubles sur mesure</p>
+            <h2 class="mt-3 max-w-2xl text-3xl font-semibold sm:text-5xl" style="font-family: var(--font-heading);">Puis les meubles : dessinés pour vos murs.</h2>
+          </div>
+          <p class="max-w-md text-sm leading-7 text-[var(--text-muted)]">Bibliothèques, têtes de lit, meubles TV et bureaux. Ouvrez une collection pour voir ses modèles réels, les faire adapter par le conseiller IA et confirmer votre commande.</p>
+        </div>
+
+        <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <article class="choice-card" data-select-card>
+            <button type="button" class="choice-visual" data-preview-source="meubles" data-preview-index="0">
+              <img alt="Bibliothèques murales" src="https://files.cdn-files-a.com/admin/system_photos_stock/800_695f65d990f81.jpg?format=avif" loading="lazy" />
+              <span class="choice-visual-label">Meubles</span>
+            </button>
+            <div class="flex flex-1 flex-col p-6">
+              <h3 class="text-xl font-semibold" style="font-family: var(--font-heading);">Bibliothèques murales</h3>
+              <p class="mt-3 flex-1 text-sm leading-7 text-[var(--text-muted)]">Des rayonnages toute hauteur qui habillent un mur entier et rangent sans encombrer.</p>
+              <p class="mt-4 text-xs font-semibold uppercase tracking-[0.14em] text-[var(--rose-dark)]">3 modèles · dès 6 à 8 semaines</p>
+              <div class="mt-5 flex flex-wrap items-center gap-2">
+                <button type="button" class="preview-open-btn" data-preview-source="meubles" data-preview-index="0">Voir les modèles</button>
+                <button type="button" class="select-toggle" data-select-item="Bibliothèques murales" aria-pressed="false">
+                  <span data-select-label data-label-default="Choisir">Choisir</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="choice-card" data-select-card>
+            <button type="button" class="choice-visual" data-preview-source="meubles" data-preview-index="1">
+              <img alt="Têtes de lit et rangements" src="https://files.cdn-files-a.com/admin/system_photos_stock/800_695bca0303870.jpg?format=avif" loading="lazy" />
+              <span class="choice-visual-label">Meubles</span>
+            </button>
+            <div class="flex flex-1 flex-col p-6">
+              <h3 class="text-xl font-semibold" style="font-family: var(--font-heading);">Têtes de lit et rangements</h3>
+              <p class="mt-3 flex-1 text-sm leading-7 text-[var(--text-muted)]">Têtes de lit douces, modules suspendus et tiroirs intégrés dessinés pour votre chambre.</p>
+              <p class="mt-4 text-xs font-semibold uppercase tracking-[0.14em] text-[var(--rose-dark)]">3 modèles · dès 4 à 6 semaines</p>
+              <div class="mt-5 flex flex-wrap items-center gap-2">
+                <button type="button" class="preview-open-btn" data-preview-source="meubles" data-preview-index="1">Voir les modèles</button>
+                <button type="button" class="select-toggle" data-select-item="Têtes de lit et rangements" aria-pressed="false">
+                  <span data-select-label data-label-default="Choisir">Choisir</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="choice-card" data-select-card>
+            <button type="button" class="choice-visual" data-preview-source="meubles" data-preview-index="2">
+              <img alt="Meubles TV et bureaux" src="https://files.cdn-files-a.com/admin/system_photos_stock/800_69639d6c4fa7c.jpg?format=avif" loading="lazy" />
+              <span class="choice-visual-label">Meubles</span>
+            </button>
+            <div class="flex flex-1 flex-col p-6">
+              <h3 class="text-xl font-semibold" style="font-family: var(--font-heading);">Meubles TV et bureaux</h3>
+              <p class="mt-3 flex-1 text-sm leading-7 text-[var(--text-muted)]">Meubles bas, postes de travail et niches sur mesure, adaptés à vos murs et à votre matériel.</p>
+              <p class="mt-4 text-xs font-semibold uppercase tracking-[0.14em] text-[var(--rose-dark)]">3 modèles · dès 5 à 6 semaines</p>
+              <div class="mt-5 flex flex-wrap items-center gap-2">
+                <button type="button" class="preview-open-btn" data-preview-source="meubles" data-preview-index="2">Voir les modèles</button>
+                <button type="button" class="select-toggle" data-select-item="Meubles TV et bureaux" aria-pressed="false">
+                  <span data-select-label data-label-default="Choisir">Choisir</span>
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <script type="application/json" data-prestation-source="meubles">
+      [
+        {"group":"Meubles","title":"Bibliothèques murales","models":[
+          {"name":"Bibliothèque toute hauteur — Blanc mat","desc":"Montants fins, tablettes réglables et soubassement fermé.","lead":"6 à 8 semaines","image":"https://files.cdn-files-a.com/admin/system_photos_stock/normal_695f65d990f81.jpg?format=avif"},
+          {"name":"Bibliothèque alcôve — Rose poudré","desc":"Fond teinté rose poudré, niches asymétriques et éclairage LED.","lead":"6 à 8 semaines","image":"https://files.cdn-files-a.com/admin/system_photos_stock/normal_695f63628419a.jpg?format=avif"},
+          {"name":"Bibliothèque bureau intégrée","desc":"Plateau escamotable ou fixe intégré entre deux colonnes.","lead":"7 à 8 semaines","image":"https://files.cdn-files-a.com/admin/system_photos_stock/normal_69743c0775630.jpg?format=avif"}
+        ]},
+        {"group":"Meubles","title":"Têtes de lit et rangements","models":[
+          {"name":"Tête de lit capitonnée — Lin & blanc","desc":"Panneaux rembourrés doux avec chevets suspendus.","lead":"4 à 6 semaines","image":"https://files.cdn-files-a.com/admin/system_photos_stock/normal_695bca0303870.jpg?format=avif"},
+          {"name":"Pont de lit toute largeur","desc":"Rangements hauts fermés et niches latérales.","lead":"5 à 6 semaines","image":"https://files.cdn-files-a.com/admin/system_photos_stock/normal_6af2185c11ebc.jpg?format=avif"},
+          {"name":"Banquette & tiroirs sous fenêtre","desc":"Assise coussinée rose poudré et grands tiroirs invisibles.","lead":"4 à 5 semaines","image":"https://files.cdn-files-a.com/admin/system_photos_stock/normal_695d4c8961ee6.jpg?format=avif"}
+        ]},
+        {"group":"Meubles","title":"Meubles TV et bureaux","models":[
+          {"name":"Meuble TV suspendu — Ligne pure","desc":"Façades sans poignées et passage de câbles invisible.","lead":"5 à 6 semaines","image":"https://files.cdn-files-a.com/admin/system_photos_stock/normal_69639d6c4fa7c.jpg?format=avif"},
+          {"name":"Bureau mural compact","desc":"Plan de travail suspendu blanc satiné avec caisson latéral.","lead":"5 semaines","image":"https://files.cdn-files-a.com/admin/system_photos_stock/normal_695fe72ff2002.jpg?format=avif"},
+          {"name":"Ensemble TV & bibliothèque","desc":"Composition murale complète associant écran et colonnes.","lead":"6 à 7 semaines","image":"https://files.cdn-files-a.com/admin/system_photos_stock/normal_69782e8c52e0d.jpg?format=avif"}
+        ]}
+      ]
+      </script>
+    </section>
+
+    <!-- 3 · Décoration murale -->
+    <section id="murs" class="section-pad px-5 sm:px-8">
+      <div class="mx-auto max-w-7xl">
+        <div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+          <div>
+            <p class="section-kicker">3 · Décoration murale</p>
+            <h2 class="mt-3 max-w-2xl text-3xl font-semibold sm:text-5xl" style="font-family: var(--font-heading);">Et pour les murs : lattes, panneaux et étagères.</h2>
+          </div>
+          <p class="max-w-md text-sm leading-7 text-[var(--text-muted)]">Des habillages qui transforment l'ambiance d'une pièce.</p>
+        </div>
+
+        <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <article class="choice-card" data-select-card>
+            <button type="button" class="choice-visual" data-preview-source="murs" data-preview-index="0">
+              <img alt="Habillages en lattes" src="https://files.cdn-files-a.com/admin/system_photos_stock/800_6960991ebfde7.jpg?format=avif" loading="lazy" />
+              <span class="choice-visual-label">Murs</span>
+            </button>
+            <div class="flex flex-1 flex-col p-6">
+              <h3 class="text-xl font-semibold" style="font-family: var(--font-heading);">Habillages en lattes</h3>
+              <p class="mt-3 flex-1 text-sm leading-7 text-[var(--text-muted)]">Des lattes de bois posées verticalement qui donnent du rythme et de la chaleur à un mur entier.</p>
+              <p class="mt-4 text-xs font-semibold uppercase tracking-[0.14em] text-[var(--rose-dark)]">3 modèles · dès 1 à 2 semaines</p>
+              <div class="mt-5 flex flex-wrap items-center gap-2">
+                <button type="button" class="preview-open-btn" data-preview-source="murs" data-preview-index="0">Voir les modèles</button>
+                <button type="button" class="select-toggle" data-select-item="Habillages en lattes" aria-pressed="false">
+                  <span data-select-label data-label-default="Choisir">Choisir</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="choice-card" data-select-card>
+            <button type="button" class="choice-visual" data-preview-source="murs" data-preview-index="1">
+              <img alt="Panneaux décoratifs" src="https://files.cdn-files-a.com/admin/system_photos_stock/800_696309c6b705b.jpg?format=avif" loading="lazy" />
+              <span class="choice-visual-label">Murs</span>
+            </button>
+            <div class="flex flex-1 flex-col p-6">
+              <h3 class="text-xl font-semibold" style="font-family: var(--font-heading);">Panneaux décoratifs</h3>
+              <p class="mt-3 flex-1 text-sm leading-7 text-[var(--text-muted)]">Panneaux muraux texturés, blanc mat ou rose poudré, pour habiller un mur sans le surcharger.</p>
+              <p class="mt-4 text-xs font-semibold uppercase tracking-[0.14em] text-[var(--rose-dark)]">3 modèles · dès 2 à 3 semaines</p>
+              <div class="mt-5 flex flex-wrap items-center gap-2">
+                <button type="button" class="preview-open-btn" data-preview-source="murs" data-preview-index="1">Voir les modèles</button>
+                <button type="button" class="select-toggle" data-select-item="Panneaux décoratifs" aria-pressed="false">
+                  <span data-select-label data-label-default="Choisir">Choisir</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="choice-card" data-select-card>
+            <button type="button" class="choice-visual" data-preview-source="murs" data-preview-index="2">
+              <img alt="Étagères suspendues" src="https://files.cdn-files-a.com/admin/system_photos_stock/800_695f65d990f81.jpg?format=avif" loading="lazy" />
+              <span class="choice-visual-label">Murs</span>
+            </button>
+            <div class="flex flex-1 flex-col p-6">
+              <h3 class="text-xl font-semibold" style="font-family: var(--font-heading);">Étagères suspendues</h3>
+              <p class="mt-3 flex-1 text-sm leading-7 text-[var(--text-muted)]">Étagères fines et niches décoratives qui donnent du rythme à vos murs sans encombrer le sol.</p>
+              <p class="mt-4 text-xs font-semibold uppercase tracking-[0.14em] text-[var(--rose-dark)]">3 modèles · dès 1 à 2 semaines</p>
+              <div class="mt-5 flex flex-wrap items-center gap-2">
+                <button type="button" class="preview-open-btn" data-preview-source="murs" data-preview-index="2">Voir les modèles</button>
+                <button type="button" class="select-toggle" data-select-item="Étagères suspendues" aria-pressed="false">
+                  <span data-select-label data-label-default="Choisir">Choisir</span>
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <script type="application/json" data-prestation-source="murs">
+      [
+        {"group":"Murs","title":"Habillages en lattes","models":[
+          {"name":"Lattes bois clair & fond blanc","desc":"Tasseaux fins espacés régulièrement sur fond blanc mat.","lead":"1 à 2 semaines","image":"https://files.cdn-files-a.com/admin/system_photos_stock/normal_6960991ebfde7.jpg?format=avif"},
+          {"name":"Lattes laquées blanc satiné","desc":"Relief architectural ton sur ton.","lead":"1 à 2 semaines","image":"https://files.cdn-files-a.com/admin/system_photos_stock/normal_6973d8a36477e.jpg?format=avif"},
+          {"name":"Claustra ajouré de séparation","desc":"Lattes toute hauteur séparant entrée et salon.","lead":"2 semaines","image":"https://files.cdn-files-a.com/admin/system_photos_stock/normal_695bdc94e241c.jpg?format=avif"}
+        ]},
+        {"group":"Murs","title":"Panneaux décoratifs","models":[
+          {"name":"Panneaux moulurés contemporains","desc":"Cadres géométriques fins blanc craie ou rose poudré.","lead":"2 à 3 semaines","image":"https://files.cdn-files-a.com/admin/system_photos_stock/normal_696309c6b705b.jpg?format=avif"},
+          {"name":"Panneaux cannelés doux","desc":"Texture ondulée subtile accrochant la lumière.","lead":"2 à 3 semaines","image":"https://files.cdn-files-a.com/admin/system_photos_stock/normal_695d8806a65c0.jpg?format=avif"},
+          {"name":"Soubassement mural sur mesure","desc":"Habillage mi-hauteur pour couloirs et halls.","lead":"2 semaines","image":"https://files.cdn-files-a.com/admin/system_photos_stock/normal_695d14d8eaea7.jpg?format=avif"}
+        ]},
+        {"group":"Murs","title":"Étagères suspendues","models":[
+          {"name":"Tablettes invisibles blanc mat","desc":"Fixations dissimulées pour une ligne épurée.","lead":"1 à 2 semaines","image":"https://files.cdn-files-a.com/admin/system_photos_stock/normal_695f65d990f81.jpg?format=avif"},
+          {"name":"Composition de niches décalées","desc":"Casiers ouverts alternant blanc pur et rose poudré.","lead":"2 semaines","image":"https://files.cdn-files-a.com/admin/system_photos_stock/normal_695d4c8961ee6.jpg?format=avif"},
+          {"name":"Étagères de cuisine ouvertes","desc":"Rayonnages résistants à l'humidité.","lead":"1 à 2 semaines","image":"https://files.cdn-files-a.com/admin/system_photos_stock/normal_6974134428fe4.jpg?format=avif"}
+        ]}
+      ]
+      </script>
+    </section>
+
+    <!-- Styles -->
+    <section id="styles" class="section-pad bg-[var(--surface-color)] px-5 sm:px-8">
+      <div class="mx-auto max-w-7xl">
+        <p class="section-kicker">Nos styles de décoration</p>
+        <h2 class="mt-3 text-3xl font-semibold sm:text-5xl" style="font-family: var(--font-heading);">Des univers pour chaque lieu.</h2>
+        <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <article class="choice-card p-5">
+            <img alt="Rose poudré & blanc" src="https://files.cdn-files-a.com/uploads/12486419/400_6ad88a7b749d0.png" class="h-44 w-full rounded-2xl object-cover" />
+            <span class="mt-4 text-xs font-bold uppercase tracking-widest text-[var(--rose-dark)]">Maison</span>
+            <h3 class="mt-1 text-xl font-semibold" style="font-family: var(--font-heading);">Rose poudré &amp; blanc</h3>
+            <p class="mt-2 text-sm text-[var(--text-muted)]">Des tons tendres et des matières claires pour une atmosphère calme et chaleureuse.</p>
+          </article>
+          <article class="choice-card p-5">
+            <img alt="Minimal lumineux" src="https://files.cdn-files-a.com/admin/system_photos_stock/400_695d8806a65c0.jpg?format=avif" class="h-44 w-full rounded-2xl object-cover" />
+            <span class="mt-4 text-xs font-bold uppercase tracking-widest text-[var(--rose-dark)]">Maison</span>
+            <h3 class="mt-1 text-xl font-semibold" style="font-family: var(--font-heading);">Minimal lumineux</h3>
+            <p class="mt-2 text-sm text-[var(--text-muted)]">Lignes épurées, beaucoup de blanc et une touche de rose pour agrandir vos pièces.</p>
+          </article>
+          <article class="choice-card p-5">
+            <img alt="Élégance travaillée" src="https://files.cdn-files-a.com/admin/system_photos_stock/400_695d40e15487f.jpg?format=avif" class="h-44 w-full rounded-2xl object-cover" />
+            <span class="mt-4 text-xs font-bold uppercase tracking-widest text-[var(--rose-dark)]">Travail</span>
+            <h3 class="mt-1 text-xl font-semibold" style="font-family: var(--font-heading);">Élégance travaillée</h3>
+            <p class="mt-2 text-sm text-[var(--text-muted)]">Une ambiance raffinée qui inspire confiance à vos clients comme à vos équipes.</p>
+          </article>
+          <article class="choice-card p-5">
+            <img alt="Accueil chaleureux" src="https://files.cdn-files-a.com/admin/system_photos_stock/400_695d14d8eaea7.jpg?format=avif" class="h-44 w-full rounded-2xl object-cover" />
+            <span class="mt-4 text-xs font-bold uppercase tracking-widest text-[var(--rose-dark)]">Travail</span>
+            <h3 class="mt-1 text-xl font-semibold" style="font-family: var(--font-heading);">Accueil chaleureux</h3>
+            <p class="mt-2 text-sm text-[var(--text-muted)]">Des accueils et salles de réunion pensés pour mettre vos visiteurs parfaitement à l'aise.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Conseiller IA interactif -->
+    <section id="conseiller" class="section-pad px-5 sm:px-8">
+      <div class="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-2">
+        <div>
+          <p class="section-kicker">Nouveau · conseiller IA</p>
+          <h2 class="mt-3 text-3xl font-semibold sm:text-5xl" style="font-family: var(--font-heading);">Décrivez le style que vous imaginez.</h2>
+          <p class="mt-4 text-base leading-7 text-[var(--text-muted)]">Le conseiller de l'atelier écoute votre projet — la pièce, la lumière, les couleurs — puis vous propose les styles Augustin qui s'en rapprochent le plus, avec leurs disponibilités et leurs délais.</p>
+          <form id="inlineAdvisorForm" class="mt-6 flex flex-col gap-3 sm:flex-row">
+            <input type="text" id="inlineAdvisorInput" placeholder="Ex. : Salon lumineux avec bibliothèque blanc et rose..." class="flex-1 rounded-full border border-[var(--border-color)] bg-white px-5 py-3 text-sm" />
+            <button type="submit" class="rounded-full bg-[var(--button-color)] px-7 py-3 text-sm font-semibold shadow-[var(--shadow-button)] hover:bg-[var(--primary-hover)] hover:text-white transition">Demander au conseiller</button>
+          </form>
+        </div>
+        <div class="choice-card p-6 sm:p-8">
+          <div class="rounded-2xl bg-[var(--background-color)] p-4 text-sm">
+            <p class="text-xs font-bold uppercase tracking-wider text-[var(--rose-dark)]">Vous</p>
+            <p id="inlineUserMsg" class="mt-1">Je voudrais un salon lumineux, blanc et rose poudré, avec une grande bibliothèque murale.</p>
+          </div>
+          <div class="mt-4 rounded-2xl border border-[var(--border-color)] bg-white p-4 text-sm">
+            <p class="text-xs font-bold uppercase tracking-wider text-[var(--rose-dark)]">Conseiller Augustin</p>
+            <p id="inlineBotMsg" class="mt-1">Votre description évoque « Rose poudré &amp; blanc » : des tons tendres, des matières claires et une bibliothèque dessinée sur mesure. Ce style est disponible sous 3 à 4 semaines.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact / Devis -->
+    <section id="contact" class="section-pad bg-[var(--surface-color)] px-5 text-center sm:px-8">
+      <div class="mx-auto max-w-2xl">
+        <p class="section-kicker">Parlons de votre projet</p>
+        <h2 class="mt-3 text-3xl font-semibold sm:text-5xl" style="font-family: var(--font-heading);">Prêt à transformer vos murs ?</h2>
+        <p class="mt-4 text-base text-[var(--text-muted)]">Décrivez-nous votre espace et le style qui vous plaît. Nous vous répondons avec des idées adaptées et un devis gratuit.</p>
+        <form id="contactForm" class="mt-8 grid gap-3 text-left sm:grid-cols-2">
+          <input type="text" id="contactName" placeholder="Votre nom" required class="rounded-xl border border-[var(--border-color)] bg-white px-4 py-3 text-sm" />
+          <input type="email" id="contactEmail" placeholder="Votre email" required class="rounded-xl border border-[var(--border-color)] bg-white px-4 py-3 text-sm" />
+          <textarea id="contactMsg" rows="3" placeholder="Décrivez votre pièce, vos dimensions ou vos envies..." required class="sm:col-span-2 rounded-xl border border-[var(--border-color)] bg-white px-4 py-3 text-sm"></textarea>
+          <div class="sm:col-span-2 text-center">
+            <button type="submit" class="rounded-full bg-[var(--button-color)] px-9 py-3.5 text-sm font-semibold shadow-[var(--shadow-button)] hover:bg-[var(--primary-hover)] hover:text-white transition">Envoyer ma demande de devis</button>
+          </div>
+        </form>
+        <p id="contactConfirm" class="mt-4 text-sm font-semibold text-[var(--rose-dark)]"></p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modale Aperçu de la prestation (3 étapes) -->
+  <div id="prestationModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/45 p-4 backdrop-blur-sm" role="dialog" aria-modal="true">
+    <div class="max-h-[90vh] w-full max-w-3xl overflow-y-auto rounded-[2rem] border border-[var(--border-color)] bg-[var(--background-color)] p-6 shadow-2xl sm:p-8">
+      <div class="flex items-start justify-between gap-4 border-b border-[var(--border-color)] pb-4">
+        <div>
+          <p id="modalGroup" class="section-kicker">Architecture</p>
+          <h2 id="modalTitle" class="mt-1 text-2xl font-semibold" style="font-family: var(--font-heading);">Aperçu de la prestation</h2>
+        </div>
+        <button type="button" id="closeModalBtn" class="rounded-full border border-[var(--border-color)] bg-white px-4 py-2 text-sm font-semibold">Fermer</button>
+      </div>
+
+      <div class="mt-5">
+        <h3 class="text-lg font-semibold" style="font-family: var(--font-heading);">1. Choisissez un modèle</h3>
+        <div id="modalModelsGrid" class="mt-3 grid gap-3 sm:grid-cols-3"></div>
+        <div class="mt-3 rounded-xl border border-[var(--border-color)] bg-white px-4 py-3 text-sm">
+          <span class="text-xs uppercase tracking-wider text-[var(--text-muted)]">Modèle retenu : </span>
+          <strong id="modalSelectedModel">—</strong>
+        </div>
+      </div>
+
+      <div class="mt-6 border-t border-[var(--border-color)] pt-5">
+        <h3 class="text-lg font-semibold" style="font-family: var(--font-heading);">2. Faites-le modifier</h3>
+        <div class="mt-3 flex flex-col gap-2 sm:flex-row">
+          <input type="text" id="modalAiInput" placeholder="Décrivez la modification souhaitée" class="flex-1 rounded-full border border-[var(--border-color)] bg-white px-4 py-2.5 text-sm" />
+          <button type="button" id="modalAiSendBtn" class="rounded-full bg-[var(--button-color)] px-6 py-2.5 text-sm font-semibold">Envoyer</button>
+        </div>
+        <p id="modalAiResult" class="mt-3 rounded-xl bg-white p-3 text-sm text-[var(--text-muted)]"></p>
+      </div>
+
+      <div class="mt-6 border-t border-[var(--border-color)] pt-5">
+        <h3 class="text-lg font-semibold" style="font-family: var(--font-heading);">3. Confirmez votre commande</h3>
+        <form id="modalOrderForm" class="mt-3 grid gap-3 sm:grid-cols-2">
+          <input type="text" id="orderName" placeholder="Votre nom" required class="rounded-xl border border-[var(--border-color)] bg-white px-4 py-2.5 text-sm" />
+          <input type="email" id="orderEmail" placeholder="Votre email" required class="rounded-xl border border-[var(--border-color)] bg-white px-4 py-2.5 text-sm" />
+          <input type="tel" id="orderPhone" placeholder="Téléphone (facultatif)" class="rounded-xl border border-[var(--border-color)] bg-white px-4 py-2.5 text-sm" />
+          <input type="text" id="orderNotes" placeholder="Précisions (facultatif)" class="rounded-xl border border-[var(--border-color)] bg-white px-4 py-2.5 text-sm" />
+          <div class="sm:col-span-2">
+            <button type="submit" class="w-full rounded-full bg-[var(--button-color)] py-3 text-sm font-semibold">Confirmer ma commande</button>
+          </div>
+        </form>
+        <p id="modalOrderConfirm" class="mt-3 text-sm font-medium text-[var(--rose-dark)]"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="border-t border-[var(--border-color)] bg-white px-5 py-12 sm:px-8">
+    <div class="mx-auto flex max-w-7xl flex-col justify-between gap-4 text-sm text-[var(--text-muted)] sm:flex-row">
+      <p><strong class="text-[var(--text-color)]">Augustin — Décoration &amp; mobilier</strong> · Lun – Sam : 8h00 – 18h00 · contact@augustin.fr</p>
+      <p>© 2026 Augustin. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>sss
