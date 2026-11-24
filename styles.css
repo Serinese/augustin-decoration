@@ -1,0 +1,118 @@
+:root {
+  --background-color: #fffbfc;
+  --surface-color: #fdf4f7;
+  --text-color: #262024;
+  --text-muted: #695d64;
+  --primary-color: #c97792;
+  --primary-hover: #b25d79;
+  --rose-dark: #a85571;
+  --button-color: #f3c6d4;
+  --logo-subtitle-color: #8b7782;
+  --border-color: #efdce3;
+  --glass-border: rgba(201, 119, 146, 0.25);
+  --nav-bg: rgba(255, 251, 252, 0.92);
+  --shadow-soft: 0 10px 30px rgba(38, 32, 36, 0.06);
+  --shadow-button: 0 8px 20px rgba(201, 119, 146, 0.25);
+  --font-logo: "Cormorant Garamond", serif;
+  --font-heading: "Playfair Display", serif;
+  --font-body: "Montserrat", sans-serif;
+}
+
+.site-header {
+  background: var(--nav-bg);
+  backdrop-filter: blur(12px);
+}
+
+.section-pad {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.section-kicker {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: var(--rose-dark);
+}
+
+.arch-frame {
+  border-radius: 999px 999px 2rem 2rem;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-soft);
+}
+
+.choice-card {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: 1.75rem;
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.choice-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--primary-color);
+}
+
+.choice-card.is-selected {
+  border: 2px solid var(--rose-dark);
+}
+
+.choice-visual {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  padding: 0;
+  border: 0;
+  cursor: pointer;
+}
+
+.choice-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.choice-visual-label {
+  position: absolute;
+  top: 0.85rem;
+  left: 0.85rem;
+  background: rgba(255, 255, 255, 0.92);
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--rose-dark);
+}
+
+.preview-open-btn,
+.select-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.55rem 1rem;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid var(--border-color);
+  background: var(--surface-color);
+  color: var(--text-color);
+}
+
+.select-toggle {
+  background: var(--button-color);
+  border-color: transparent;
+}
+
+.select-toggle[aria-pressed="true"] {
+  background: var(--rose-dark);
+  color: #ffffff;
+}
